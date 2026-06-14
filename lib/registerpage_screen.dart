@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:groceries/home_screen.dart';
+import 'package:groceries/screen/home/home_screen.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+
+
+
+
+class RegisterPageScreen extends StatelessWidget {
+  const RegisterPageScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
+      body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 25),
           child: Column(
@@ -19,13 +23,13 @@ class LoginScreen extends StatelessWidget {
               SizedBox(height: 100),
 
               Text(
-                "Login",
+                "Sign Up",
                 style: TextStyle(fontSize: 26, fontWeight: FontWeight.w600),
               ),
 
               SizedBox(height: 15),
               Text(
-                "Enter your emails and password",
+                "Enter your credentials to continue",
                 style: TextStyle(fontSize: 16),
               ),
 
@@ -35,6 +39,11 @@ class LoginScreen extends StatelessWidget {
 
               TextFormField(),
               SizedBox(height: 30),
+               SizedBox(height: 30),
+
+              Text("Username"),
+              TextFormField(),
+              SizedBox(height: 40),
 
               Text("Password"),
               TextFormField(
@@ -42,11 +51,34 @@ class LoginScreen extends StatelessWidget {
                 decoration: InputDecoration(suffixIcon: Icon(Icons.visibility)),
               ),
               SizedBox(height: 20),
-              Align(
-                alignment: Alignment.bottomRight,
-                child: Text("Forgot Password?"),
-              ),
-              SizedBox(height: 30),
+
+
+               RichText(
+  textAlign: TextAlign.center,
+  text: TextSpan(
+    style: TextStyle(
+      fontSize: 14, 
+      color: Colors.black, 
+    ), 
+    children: [
+      TextSpan(
+        text: "By continuing you agree to our ",
+        style: TextStyle(fontWeight: FontWeight.w600),
+      ),
+      TextSpan(
+        text: "Terms of Service and Privacy Policy.",
+        style: TextStyle(
+          color: Color(0xff53B175),
+          fontWeight: FontWeight.w600,
+        ),
+      ),
+    ],
+  ),
+),
+            
+
+
+             SizedBox(height: 30), 
 
               InkWell(
                 onTap: () {
@@ -65,7 +97,7 @@ class LoginScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(19),
                   ),
                   child: Text(
-                    "Login",
+                    "sign up",
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w600,
@@ -80,7 +112,7 @@ class LoginScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "Don't have an account?",
+                    "Already have an account? Sign up",
                     style: TextStyle(fontWeight: FontWeight.w600),
                   ),
                   Text(

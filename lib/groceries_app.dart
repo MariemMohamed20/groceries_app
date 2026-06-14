@@ -1,7 +1,8 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:groceries/login_screen.dart';
+import 'package:groceries/onbording_screen.dart';
+
 
 
 
@@ -12,7 +13,7 @@ class GroceriesApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginScreen(),
+      home: OnbordingScreen(),
     );
   }
 }
