@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:groceries/registerpage_screen.dart';
+import 'package:groceries/screen/login/registerpage_screen.dart';
 
 
 

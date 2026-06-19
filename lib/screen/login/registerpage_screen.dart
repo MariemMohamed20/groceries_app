@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:groceries/screen/home/home_screen.dart';
-
-
-
+import 'package:groceries/screen/bottom_nav_bar/bottm_nav_bar_screen.dart';
 
 
 class RegisterPageScreen extends StatelessWidget {
@@ -77,14 +74,13 @@ class RegisterPageScreen extends StatelessWidget {
 ),
             
 
-
              SizedBox(height: 30), 
 
               InkWell(
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => HomeScreen()),
+                    MaterialPageRoute(builder: (context) => BottomNavBarScreen()),
                   );
                   
                 },
