@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:groceries/screen/Account/account_screen.dart';
+import 'package:groceries/screen/Explore/explore_screen.dart';
 import 'package:groceries/screen/favorites/favorits_screen.dart';
 import 'package:groceries/screen/home/home_screen.dart';
+import 'package:groceries/screen/my_cart/carts_screen.dart';
+
 
 
 class BottomNavBarScreen extends StatefulWidget {
@@ -16,11 +20,11 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
  List<Widget> screens = [
     HomeScreen(),
   
-    Center(child: Text('Explore Screen')),
-    Center(child: Text('Cart Screen')),
+    const FindProductsScreen(),
+    const CartScreen(),
    const FavoritsScreen(),
    
-    Center(child: Text('Account Screen')),
+    const AccountScreen(),
   ];
   @override
   Widget build(BuildContext context) {

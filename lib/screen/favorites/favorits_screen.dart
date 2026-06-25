@@ -7,8 +7,6 @@ class FavoritsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-
-      // 1. شريط العنوان العلوي
       appBar: AppBar(
         title: const Text(
           "Favorite",
@@ -19,7 +17,9 @@ class FavoritsScreen extends StatelessWidget {
         elevation: 0,
       ),
       body: ListView(
+        physics: const BouncingScrollPhysics(),
         children: [
+          // 1. Sprite Can
           ListTile(
             leading: Image.asset(
               'assets/images/Group 6874.png',
@@ -32,16 +32,16 @@ class FavoritsScreen extends StatelessWidget {
             ),
             subtitle: const Text("325ml, Price"),
             trailing: const Text(
-              "\$1.50  ",
+              "\$1.50",
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
             ),
           ),
+          const Divider(height: 20, thickness: 1, indent: 20, endIndent: 20), // الفاصل الصحيح
 
-          TextFormField(),
-
+          // 2. Diet Coke
           ListTile(
             leading: Image.asset(
-              'assets/images/pngfuel 11.png', // مسار صورة الدايت كوك
+              'assets/images/pngfuel 11.png',
               width: 50,
               height: 50,
               fit: BoxFit.contain,
@@ -52,17 +52,16 @@ class FavoritsScreen extends StatelessWidget {
             ),
             subtitle: const Text("355ml, Price"),
             trailing: const Text(
-              "\$1.99  ",
+              "\$1.99",
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
             ),
           ),
+          const Divider(height: 20, thickness: 1, indent: 20, endIndent: 20),
 
-          TextFormField(),
-
-          // المنتج الثالث: Apple & Grape Juice
+          // 3. Apple & Grape Juice
           ListTile(
             leading: Image.asset(
-              'assets/images/tree-top-juice-apple-grape-64oz 1.png', // مسار صورة العصير
+              'assets/images/tree-top-juice-apple-grape-64oz 1.png',
               width: 50,
               height: 50,
               fit: BoxFit.contain,
@@ -73,16 +72,16 @@ class FavoritsScreen extends StatelessWidget {
             ),
             subtitle: const Text("2L, Price"),
             trailing: const Text(
-              "\$15.50  ",
+              "\$15.50",
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
             ),
           ),
+          const Divider(height: 20, thickness: 1, indent: 20, endIndent: 20),
 
-          TextFormField(),
-
+          // 4. Coca Cola Can
           ListTile(
             leading: Image.asset(
-              'assets/images/pngfuel 13.png', // مسار صورة العصير
+              'assets/images/pngfuel 13.png',
               width: 50,
               height: 50,
               fit: BoxFit.contain,
@@ -93,14 +92,16 @@ class FavoritsScreen extends StatelessWidget {
             ),
             subtitle: const Text("325ml, Price"),
             trailing: const Text(
-              "\$4.99  ",
+              "\$4.99",
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
             ),
           ),
-          TextFormField(),
+          const Divider(height: 20, thickness: 1, indent: 20, endIndent: 20),
+
+          // 5. Pepsi Can
           ListTile(
             leading: Image.asset(
-              'assets/images/pngfuel 14.png', // مسار صورتك الحالي في الكود
+              'assets/images/pngfuel 14.png',
               width: 50,
               height: 50,
               fit: BoxFit.contain,
@@ -110,23 +111,35 @@ class FavoritsScreen extends StatelessWidget {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             subtitle: const Text("330ml, Price"),
-
-            // 🔽 امسحي الـ trailing القديم واكتبي هذا مكانه بالظبط 🔽
-            trailing: const SizedBox(
-              width: 80,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Text(
-                    "\$4.99",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-                  ),
-                  SizedBox(width: 5),
-                ],
-              ),
+            trailing: const Text(
+              "\$4.99",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
             ),
           ),
+          const SizedBox(height: 20), // مسافة بسيطة في الأسفل لإنهاء القائمة
         ],
+      ),
+      
+      // وضع الزر الأخضر الكبير هنا ليكون ثابتاً ومميزاً في أسفل شاشة المفضلات
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Container(
+          width: double.infinity,
+          height: 60,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            color: const Color(0xff53B175),
+            borderRadius: BorderRadius.circular(19),
+          ),
+          child: const Text(
+            "Add All To Cart",
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.w600,
+              color: Colors.white,
+            ),
+          ),
+        ),
       ),
     );
   }

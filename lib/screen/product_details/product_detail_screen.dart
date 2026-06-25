@@ -8,12 +8,10 @@ class ProductDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          ProductHeader(),
-          ExpandableText()
-          ],
-          ),
-          );
+      body: ListView(children: [
+        ProductHeader(),
+       ExpandableText()
+       ]),
+    );
   }
 }
