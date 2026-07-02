@@ -4,7 +4,6 @@
 <img width="1080" height="2400" alt="Screenshot_1783007192" src="https://github.com/user-attachments/assets/ed9f6d56-48d0-4305-b978-c585d53bec3f" />
 <img width="1080" height="2400" alt="Screenshot_1783007185" src="https://github.com/user-attachments/assets/dc9fcf86-971d-4f08-844e-ed09d9c7d509" />
 <img width="1080" height="2400" alt="Screenshot_1783007179" src="https://github.com/user-attachments/assets/4b72a901-6500-43bd-8adf-22788c58ffc2" />
-<img width="1080" height="2400" alt="Screenshot_1782394137" src="https://github.com/user-attachments/assets/1d463292-59c6-49e9-a886-0fbc30875dc0" />
 <img width="1080" height="2400" alt="Screenshot_1782394186" src="https://github.com/user-attachments/assets/44e4a9cd-3fa7-4846-b99c-a7bcfa2b4814" />
 <img width="1080" height="2400" alt="Screenshot_1782394176" src="https://github.com/user-attachments/assets/7b430794-42ea-4a08-a7f7-5b4b99af73ba" />
 <img width="1080" height="2400" alt="Screenshot_1782394164" src="https://github.com/user-attachments/assets/376577a4-6ed7-4151-944d-8c8dea3e3d56" />
