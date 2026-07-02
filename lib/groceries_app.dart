@@ -1,7 +1,8 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:groceries/onbording_screen.dart';
+
+import 'package:groceries/screen/splash/splash_screen.dart';
 
 
 class GroceriesApp extends StatelessWidget {
@@ -11,7 +12,7 @@ class GroceriesApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: OnbordingScreen(),
+      home: SplashScreen(),
       
     );
   }
